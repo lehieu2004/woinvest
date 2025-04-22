@@ -407,7 +407,9 @@
               if (response.ok) {
                 alert("Chúc mừng bạn đã đăng ký thành công.");
                 form.reset();
-              } else {
+                fbq('track', 'Lead'); // Gửi event về Facebook Pixel
+              } 
+                else {
                 alert("❌ Gửi không thành công. Vui lòng thử lại sau.");
               }
             } catch (error) {
